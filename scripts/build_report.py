@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build report/index.html: inject portfolio data into the HTML template."""
+"""Build docs/index.html: inject portfolio data into the HTML template."""
 import json, os
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -64,4 +64,4 @@ tpl = open(os.path.join(BASE, "docs", "template.html")).read()
 html = tpl.replace("/*__DATA__*/", json.dumps(port, ensure_ascii=False))
 os.makedirs(REPORT, exist_ok=True)
 open(os.path.join(REPORT, "index.html"), "w").write(html)
-print("wrote report/index.html", len(html), "bytes")
+print("wrote docs/index.html", len(html), "bytes")
