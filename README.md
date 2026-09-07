@@ -24,6 +24,10 @@ An equal-weight, 12-stock Pakistan Stock Exchange portfolio — built by scrapin
 
 Open [`docs/index.html`](docs/index.html) in a browser — it's fully self-contained (no build step, no server needed).
 
+**Live hosts:**
+- GitHub Pages: `https://thespecialone1.github.io/12stockIndex/`
+- Vercel: import this repo at [vercel.com/new](https://vercel.com/new) — `vercel.json` already points the build at `docs/`, so no configuration is needed. Preview URL: `https://12stockindex.vercel.app`
+
 ## Repository structure
 
 - `docs/` — the generated report (`index.html`) and the Checklist Design audit (`AUDIT.md`)
