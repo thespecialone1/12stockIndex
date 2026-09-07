@@ -22,11 +22,11 @@ An equal-weight, 12-stock Pakistan Stock Exchange portfolio — built by scrapin
 
 ## Viewing the report
 
-Open [`report/index.html`](report/index.html) in a browser — it's fully self-contained (no build step, no server needed).
+Open [`docs/index.html`](docs/index.html) in a browser — it's fully self-contained (no build step, no server needed).
 
 ## Repository structure
 
-- `report/` — the generated report (`index.html`) and the Checklist Design audit (`AUDIT.md`)
+- `docs/` — the generated report (`index.html`) and the Checklist Design audit (`AUDIT.md`)
 - `scripts/` — the reproducible research pipeline:
   1. `collect_key_stats.py` — pulls prices, P/E, EPS, yields, market caps for every listed symbol
   2. `screen.py` — liquidity/quality screen (495 → 81)

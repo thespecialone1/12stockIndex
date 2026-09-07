@@ -4,7 +4,7 @@ import json, os
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(BASE, "data")
-REPORT = os.path.join(BASE, "report")
+REPORT = os.path.join(BASE, "docs")
 
 port = json.load(open(os.path.join(DATA, "portfolio.json")))
 deep = json.load(open(os.path.join(DATA, "deep_data.json")))
@@ -60,7 +60,7 @@ port["alpha"] = {
     "m12": {"port": 13.8, "idx": 12.6, "diff": 1.2},
 }
 
-tpl = open(os.path.join(BASE, "report", "template.html")).read()
+tpl = open(os.path.join(BASE, "docs", "template.html")).read()
 html = tpl.replace("/*__DATA__*/", json.dumps(port, ensure_ascii=False))
 os.makedirs(REPORT, exist_ok=True)
 open(os.path.join(REPORT, "index.html"), "w").write(html)
